@@ -47,9 +47,23 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           ],
         ),
         actions: <Widget>[
-          Icon(Icons.search),
+          InkWell(child: const Icon(Icons.search), onTap: () {}),
           Padding(padding: const EdgeInsets.symmetric(horizontal: 5.0)),
-          Icon(Icons.more_vert)
+          PopupMenuButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            itemBuilder: (context) {
+              return [
+                // In this case, we need 5 popupmenuItems one for each option.
+                const PopupMenuItem(child: Text('New Group')),
+                const PopupMenuItem(child: Text('New Broadcast')),
+                const PopupMenuItem(child: Text('Linked Devices')),
+                const PopupMenuItem(child: Text('Starred Messages')),
+                const PopupMenuItem(child: Text('Settings')),
+              ];
+            },
+          ),
         ],
       ),
       body: TabBarView(
