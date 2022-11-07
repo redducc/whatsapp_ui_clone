@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'models/chat_model.dart';
 import 'pages/call_screen.dart';
 import 'pages/camera_screen.dart';
 import 'pages/chat_screen.dart';
