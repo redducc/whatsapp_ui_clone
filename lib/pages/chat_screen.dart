@@ -16,9 +16,9 @@ class _ChatScreenState extends State<ChatScreen> {
       itemCount: dummyData.length,
       itemBuilder: ((context, i) => Column(
             children: <Widget>[
-              Divider(
-                height: 10.0,
-              ),
+              // Divider(
+              //   height: 10.0,
+              // ),
               ListTile(
                 leading: CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
